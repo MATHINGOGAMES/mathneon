@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-dark-bg text-white antialiased overflow-x-hidden;
+  font-family: "Segoe UI", system-ui, sans-serif;
+}
+
+.glass-card {
+  @apply bg-dark-card/80 backdrop-blur-md border border-dark-border rounded-2xl shadow-lg;
+}
+
+.neon-text {
+  text-shadow: 0 0 10px currentColor, 0 0 30px currentColor;
+}
+.neon-border {
+  @apply border border-neon-cyan/30 shadow-neon-cyan;
+}
+
+/* ✅ إعدادات الطباعة الاحترافية */
+@media print {
+  body {
+    background: #fff !important;
+    color: #000 !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .print-only {
+    display: block !important;
+    page-break-inside: avoid;
+  }
+  [class*="neon"],
+  [class*="shadow-neon"] {
+    box-shadow: none !important;
+    border-color: #000 !important;
+    color: #000 !important;
+  }
+  input,
+  textarea {
+    border: 1px solid #000 !important;
+    color: #000 !important;
+  }
+}

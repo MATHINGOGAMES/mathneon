@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: #050508;
+  color: white;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  font-family: "Segoe UI", system-ui, sans-serif;
+}
+
+/* ✅ إعدادات طباعة محسّنة لورقة واحدة فقط */
+@media print {
+  /* إخفاء كامل لواجهة التطبيق */
+  .no-print,
+  header,
+  main,
+  nav,
+  footer,
+  button,
+  input,
+  select,
+  textarea {
+    display: none !important;
+  }
+
+  /* إظهار ورقة العمل فقط مع ضبط الأبعاد */
+  .print-only {
+    display: block !important;
+    position: static !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 12mm 15mm !important;
+    background: white !important;
+    color: black !important;
+    box-shadow: none !important;
+    border: none !important;
+    page-break-inside: avoid !important;
+    page-break-after: avoid !important;
+  }
+
+  /* ضمان طباعة الألوان والنصوص بدقة */
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+}
