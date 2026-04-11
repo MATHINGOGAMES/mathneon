@@ -1,0 +1,32 @@
+# ==========================================
+# Robots.txt - أكاديمية جدول الضرب (MathNeon)
+# ==========================================
+
+User-agent: *
+Allow: /
+
+# منع الزحف إلى ملفات التطوير والإعدادات غير الضرورية
+Disallow: /node_modules/
+Disallow: /.env*
+Disallow: /vite.config.js
+Disallow: /package.json
+Disallow: /package-lock.json
+Disallow: /tsconfig.json
+Disallow: /.git/
+
+# السماح بالزحف الكامل للمحتوى العام والأصول
+Allow: /assets/
+Allow: /manifest.json
+Allow: /favicon.ico
+Allow: /*.svg
+Allow: /*.png
+Allow: /*.jpg
+Allow: /*.css
+Allow: /*.js
+
+# توجيه لمحركات البحث إلى خريطة الموقع
+Sitemap: https://mathneon.vercel.app/sitemap.xml
+
+# ملاحظة لمحركات البحث المتقدمة:
+# الموقع تطبيق صفحة واحدة (SPA) يعتمد على JavaScript.
+# يُرجى تنفيذ JavaScript لفهرسة المحتوى الديناميكي متعدد اللغات.
