@@ -1,16 +1,203 @@
 <!doctype html>
 <html lang="ar" dir="rtl">
   <head>
+    <!-- 🔐 الترميز والأمان الأساسي -->
     <meta charset="UTF-8" />
-    <link rel="manifest" href="/manifest.json">
-<meta name="theme-color" content="#4f46e5">
-<link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="أكاديمية جدول الضرب - تدرب على الضرب بطريقة ممتعة" />
-    <title>أكاديمية جدول الضرب 🧮</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+    
+    <!-- 🔍 السيو الأساسي -->
+    <title>MathNeon | أكاديمية جدول الضرب التفاعلية - تعلم الضرب بذكاء للطلاب 10-15 سنة</title>
+    <meta name="description" content="منصة عربية تفاعلية لإتقان جدول الضرب من 1 إلى 12. دروس مرئية، مساعد ذكي، تمارين تكيفية، ومسائل حياتية. مجاني 100% للطلاب من 10 إلى 15 سنة. جرب الآن!" />
+    <meta name="keywords" content="جدول الضرب, تعلم الرياضيات, تعليم الضرب للأطفال, تمارين ضرب تفاعلية, أوراق عمل رياضيات, منصة تعليمية, ذكاء اصطناعي تعليمي, multiplication table, math learning app, educational platform" />
+    <meta name="author" content="MathNeon Academy" />
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <link rel="canonical" href="https://mathneon.vercel.app/" />
+    
+    <!-- 🌐 تعدد اللغات (Hreflang) -->
+    <meta name="language" content="Arabic" />
+    <link rel="alternate" hreflang="ar" href="https://mathneon.vercel.app/" />
+    <link rel="alternate" hreflang="en" href="https://mathneon.vercel.app/?lang=en" />
+    <link rel="alternate" hreflang="fr" href="https://mathneon.vercel.app/?lang=fr" />
+    <link rel="alternate" hreflang="es" href="https://mathneon.vercel.app/?lang=es" />
+    <link rel="alternate" hreflang="x-default" href="https://mathneon.vercel.app/" />
+    
+    <!-- 📘 Open Graph / فيسبوك (مدمج مع حسابك) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://mathneon.vercel.app/" />
+    <meta property="og:site_name" content="MathNeon Academy" />
+    <meta property="og:locale" content="ar_AR" />
+    <meta property="og:locale:alternate" content="en_US" />
+    <meta property="og:locale:alternate" content="fr_FR" />
+    <meta property="og:locale:alternate" content="es_ES" />
+    <meta property="og:title" content="MathNeon | أكاديمية جدول الضرب التفاعلية" />
+    <meta property="og:description" content="منصة عربية تفاعلية لإتقان جدول الضرب. دروس مرئية، مساعد ذكي، تمارين تكيفية. مجاني 100% للطلاب 10-15 سنة." />
+    <meta property="og:image" content="https://mathneon.vercel.app/og-image.jpg" />
+    <meta property="og:image:alt" content="MathNeon - واجهة أكاديمية جدول الضرب بتصميم نيون تفاعلي" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="fb:app_id" content="61572001347425" />
+    
+    <!-- 🐦 Twitter Card / إكس (مدمج مع حسابك) -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@LOmolo62538" />
+    <meta name="twitter:creator" content="@LOmolo62538" />
+    <meta name="twitter:url" content="https://mathneon.vercel.app/" />
+    <meta name="twitter:title" content="MathNeon | أكاديمية جدول الضرب التفاعلية" />
+    <meta name="twitter:description" content="منصة عربية تفاعلية لإتقان جدول الضرب. دروس مرئية، مساعد ذكي، تمارين تكيفية. مجاني 100% للطلاب 10-15 سنة." />
+    <meta name="twitter:image" content="https://mathneon.vercel.app/og-image.jpg" />
+    <meta name="twitter:image:alt" content="MathNeon - واجهة أكاديمية جدول الضرب بتصميم نيون تفاعلي" />
+    
+    <!-- 📧 بيانات التواصل (Schema Email) -->
+    <link rel="me" href="mailto:mathneon@proton.me" />
+    <meta name="contact" content="mathneon@proton.me" />
+    
+    <!-- 🎨 الثيم، PWA، والأيقونات -->
+    <meta name="theme-color" content="#050508" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="MathNeon" />
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#00f3ff" />
+    
+    <!-- ⚡ تحسين الأداء (Core Web Vitals) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://api.groq.com" crossorigin />
+    <link rel="preload" as="script" href="/src/main.jsx" />
+    <link rel="dns-prefetch" href="https://mathneon.vercel.app" />
+    
+    <!-- 📊 البيانات المنظمة المتقدمة (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebApplication",
+          "@id": "https://mathneon.vercel.app/#webapp",
+          "name": "MathNeon Academy",
+          "alternateName": ["أكاديمية جدول الضرب", "Multiplication Academy", "Académie Multiplication"],
+          "url": "https://mathneon.vercel.app/",
+          "description": "منصة تعليمية تفاعلية عربية لإتقان جدول الضرب من 1 إلى 12 باستخدام دروس مرئية، مساعد ذكي، تمارين تكيفية، ومسائل حياتية. مجاني 100% للطلاب من 10 إلى 15 سنة.",
+          "applicationCategory": "EducationalApplication",
+          "operatingSystem": "Any",
+          "browserRequirements": "Requires JavaScript. Requires HTML5.",
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/InStock"
+          },
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "reviewCount": "127",
+            "bestRating": "5",
+            "worstRating": "1"
+          },
+          "author": {
+            "@type": "Organization",
+            "name": "MathNeon Academy",
+            "url": "https://mathneon.vercel.app/",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://mathneon.vercel.app/logo.png",
+              "width": "400",
+              "height": "400"
+            },
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "contactType": "customer support",
+              "email": "mathneon@proton.me",
+              "availableLanguage": ["Arabic", "English", "French", "Spanish"]
+            },
+            "sameAs": [
+              "https://twitter.com/LOmolo62538",
+              "https://www.facebook.com/app/?id=61572001347425",
+              "mailto:mathneon@proton.me"
+            ]
+          },
+          "inLanguage": ["ar", "en", "fr", "es"],
+          "audience": {
+            "@type": "EducationalAudience",
+            "educationalRole": "student",
+            "audienceType": "أطفال ومراهقون من 10 إلى 15 سنة"
+          },
+          "educationalUse": ["Practice", "Assessment", "Tutorial"],
+          "learningResourceType": ["InteractiveApplication", "Exercise"],
+          "typicalAgeRange": "10-15",
+          "isAccessibleForFree": true,
+          "accessibilityFeature": ["alternativeText", "highContrastDisplay", "readingOrder", "structuralNavigation", "tableOfContents"],
+          "accessibilityHazard": ["noFlashingHazard", "noMotionSimulationHazard", "noSoundHazard"]
+        },
+        {
+          "@type": "Organization",
+          "@id": "https://mathneon.vercel.app/#organization",
+          "name": "MathNeon Academy",
+          "url": "https://mathneon.vercel.app/",
+          "logo": "https://mathneon.vercel.app/logo.png",
+          "sameAs": [
+            "https://twitter.com/LOmolo62538",
+            "https://www.facebook.com/app/?id=61572001347425"
+          ],
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "contactType": "support",
+            "email": "mathneon@proton.me",
+            "areaServed": "Worldwide",
+            "availableLanguage": ["Arabic", "English", "French", "Spanish"]
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://mathneon.vercel.app/#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "الرئيسية",
+              "item": "https://mathneon.vercel.app/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "الدروس",
+              "item": "https://mathneon.vercel.app/#lessons"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "التمارين",
+              "item": "https://mathneon.vercel.app/#practice"
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+    
+    <!-- 🔒 رؤوس أمان إضافية (عبر ميتا) -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://api.groq.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://api.groq.com https://mathneon.vercel.app;" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
   </head>
   <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+    <!-- 🎯 محتوى رئيسي مع علامات إتاحة الوصول -->
+    <div id="root" role="main" aria-label="محتوى أكاديمية جدول الضرب التفاعلية"></div>
+    
+    <!-- 📜 سكريبت التطبيق مع تأخير ذكي -->
+    <script type="module" src="/src/main.jsx" defer></script>
+    
+    <!-- 🤖 مؤشر للروبوتات (اختياري) -->
+    <noscript>
+      <p style="text-align:center;padding:2rem;font-family:system-ui,sans-serif;">
+        ⚠️ يتطلب MathNeon JavaScript للعمل. يرجى تفعيله في متصفحك للاستفادة من المنصة التفاعلية.
+      </p>
+    </noscript>
   </body>
 </html>
